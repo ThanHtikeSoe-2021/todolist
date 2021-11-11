@@ -1,0 +1,82 @@
+body{
+  background-color: #F3F0D7;
+
+}
+#background{
+  margin:20px;
+  background-color: #F6D7A7;
+  padding:50px;
+  border-radius:5%;
+}
+/* remove indentation of list items */
+ul {
+  padding-left: 0;
+}
+#tasks{
+  width:80%;
+
+}
+/* remove traditional bullet from front of list items */
+/* Step 3 below here */
+li {
+  font-size: 20px;
+  list-style-type: none;
+  background-color: #eee;
+  border: 1px solid #c3c3c3;
+  padding: 10px 0px 10px 5px;
+}
+
+/* Step 5 below here */
+.done {
+  background-color: green;
+}
+
+/* mark task as finished */
+/* Step 6 below here */
+.remove {
+  background-color: red;
+}
+
+li.finished {
+  color: white;
+  background-color: grey;
+  text-decoration: line-through;
+}
+
+input[type="text"] {
+  font-size: 18px;
+  width: 94%;
+  padding: 10px;
+}
+
+input[type="button"] {
+  font-size: 1.2em;
+  margin: -6px 4px 0px 0px;
+}
+
+#addButton {
+  padding: 10px;
+  margin:20px;
+}
+
+/* Step 10 below here */
+.aboutcolor {
+  background-color: lightblue;
+}
+
+/* Step 12 below here */
+#divabout {
+  display: inline-block;
+  height: 100px;
+  width: 300px;
+  text-align: left;
+  font-weight: bolder;
+  font-size: 1rem;
+  font-family: cursive;
+  margin: 5px 0px;
+}
+
+#author {
+  margin: 10px;
+  padding: 10px;
+}
