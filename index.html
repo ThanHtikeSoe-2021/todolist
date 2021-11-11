@@ -19,7 +19,8 @@
         var item = document.createElement("li");
         // add HTML for buttons and new task text
         // Note, need to use '' because of "" in HTML
-        item.innerHTML = '<input type="button" class="done" onclick="markDone(this.parentNode)"  value="&#x2713;" /> ' + '<input type="button" class="remove" onclick="remove(this.parentNode)" value="&#x2715;" /> ' + newTask;
+        item.innerHTML = '<input type="button" class="done" onclick="markDone(this.parentNode)"  value="&#x2713;" /> ' + '<input type="button" class="remove" onclick="remove(this.parentNode)" value="&#x2715;" /> ' +
+          '<input type="button" class="important" onclick="important(this.parentNode)" value="!" />' + newTask;
 
         // add new item as part of existing list
         document.getElementById("tasks").appendChild(item);
@@ -35,6 +36,9 @@
       item.className = 'finished';
     }
 
+    function important(item) {
+      item.className = "importance";
+    }
     /* Step 7 below here */
     function remove(item) {
       // remove item completely from document
@@ -68,46 +72,43 @@
 
 <body>
   <h1 style="text-align:center;" id="myHeader">TO DO List</h1>
-<div id="background">
+  <div id="background">
+
+    <input type="button" value="Add Task" id="addButton" onclick="addTask()">
+
+    <input style="width:500px;" type="text" id="input" placeholder="Enter Task....">
+    <hr>
+
+    <ul id="tasks">
+
+      <li>
+
+        <input type="button" class="done" onclick="markDone(this.parentNode)" value="&#x2713;" />
+
+        <input type="button" class="remove" onclick="remove(this.parentNode)" value="&#x2715;" />
+        <input type="button" class="important" onclick="important(this.parentNode)" value="!" />
+        make todo list
+
+      </li>
+
+    </ul>
+
+    <hr>
+
+    <!-- STEPs 8 and 9 below here  -->
+    <div id="divabout">
+      <div id="author">
+        <h3></h3>
+        </id>
+      </div>
+      <input style="background-color:lightgrey;" type="button" onclick="doAbout()" value="ABOUT" />
 
 
 
-
-  <input type="button" value="Add Task" id="addButton" onclick="addTask()">
-
-  <input style="width:500px;" type="text" id="input" placeholder="Enter Task....">
-  <hr>
-
-  <ul id="tasks">
-
-    <li>
-
-      <input type="button" class="done" onclick="markDone(this.parentNode)" value="&#x2713;" />
-
-      <input type="button" class="remove" onclick="remove(this.parentNode)" value="&#x2715;" />
-
-      make todo list
-
-    </li>
-
-  </ul>
-
-  <hr>
-
-  <!-- STEPs 8 and 9 below here  -->
-  <div id="divabout">
-    <div id="author">
-      <h3></h3>
-      </id>
+      <!-- STEP 13 below here  -->
+      <input style="background-color:lightgrey;" type="button" onclick="clearAbout()" value="CLEAR" />
     </div>
-    <input style="background-color:lightgrey;" type="button" onclick="doAbout()" value="ABOUT" />
-
-
-
-    <!-- STEP 13 below here  -->
-    <input style="background-color:lightgrey;" type="button" onclick="clearAbout()" value="CLEAR" />
   </div>
-</div>
 </body>
 
 </html>
